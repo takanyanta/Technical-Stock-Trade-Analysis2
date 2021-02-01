@@ -60,9 +60,9 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 |-|Predict:0(up) | Predict:1(stay) | Predict:2(down) |
 ---|---|---|---
-|Actual:0(up)        |     3632       |      8680       |       724|
-|Actual:1(stay)      |     2927       |     10910       |       813|
-|Actual:2(down)       |    2811       |      8883       |      1237|
+|**Actual:0(up)**        |     3632       |      8680       |       724|
+|**Actual:1(stay)**      |     2927       |     10910       |       813|
+|**Actual:2(down)**       |    2811       |      8883       |      1237|
 
 #### 2-2. Gradient Boost Classification
 
@@ -75,9 +75,9 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 |-|Predict:0(up) | Predict:1(stay) | Predict:2(down) |
 ---|---|---|---
-|Actual:0(up)        |     3632       |      8680       |       724|
-|Actual:1(stay)      |     2927       |     10910       |       813|
-|Actual:2(down)       |    2811       |      8883       |      1237|
+|**Actual:0(up)**        |     3632       |      8680       |       724|
+|**Actual:1(stay)**      |     2927       |     10910       |       813|
+|**Actual:2(down)**       |    2811       |      8883       |      1237|
 
 #### 2-3. GRU Classification
 * Define *batch_size* as 128
@@ -86,14 +86,14 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 |Class|Accuracy-Score|
 ---|---
-|**Train**|0.689112112333916|
-|**Test**|0.6414555481694857|
+|Train|0.689112112333916|
+|Test|0.6414555481694857|
 
 |-|Predict:0(up) | Predict:1(stay) | Predict:2(down) |
 ---|---|---|---
-|Actual:0(up)         |    9097         |    2635      |       1304|
-|Actual:1(stay)      |     3442      |       8630      |       2578|
-|Actual:2(down)        |   1953        |     2651      |       8327|
+|**Actual:0(up)**         |    9097         |    2635      |       1304|
+|**Actual:1(stay)**      |     3442      |       8630      |       2578|
+|**Actual:2(down)**        |   1953        |     2651      |       8327|
 
 
 ### 3. Verification in actual data
