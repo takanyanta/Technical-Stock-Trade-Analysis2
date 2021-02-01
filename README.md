@@ -125,6 +125,17 @@ for i in tqdm( file_list_random ):
 
 ### 2-4. Logistic Regression
 
+```python
+LogReg = LogisticRegression(max_iter=1000, verbose=1, n_jobs=-1)
+LogReg.fit(X_train1, y_train1)
+print(LogReg.score(X_train1, y_train1))
+print(LogReg.score(X_test1, y_test1))
+res_LogReg = pd.DataFrame(confusion_matrix(y_test1, LogReg.predict(X_test1)), 
+             columns=["Predict:0(up)", "Predict:1(stay)", "Predict:2(down)"], 
+             index=["Actual:0(up)", "Actual:1(stay)", "Actual:2(down)"])
+print( res_LogReg )
+```
+
 |Class|Accuracy-Score|
 ---|---
 |**Train**|0.3763831033585004|
@@ -139,6 +150,17 @@ for i in tqdm( file_list_random ):
 ### 2-5. Gradient Boost Classification
 
 * Only change *max_depth* parameter(set to 19)
+
+```python
+XGBC = XGBClassifier(max_depth = 19,  tree_method='gpu_hist')
+XGBC.fit(X_train1, y_train1)
+print(XGBC.score(X_train1, y_train1))
+print(XGBC.score(X_test1, y_test1))
+res_XGBC = pd.DataFrame(confusion_matrix(y_test1, XGBC.predict(X_test1)), 
+             columns=["Predict:0(up)", "Predict:1(stay)", "Predict:2(down)"], 
+             index=["Actual:0(up)", "Actual:1(stay)", "Actual:2(down)"])
+print( res_XGBC )
+```
 
 |Class|Accuracy-Score|
 ---|---
@@ -161,6 +183,30 @@ for i in tqdm( file_list_random ):
 **Learning History**
 
 ![Extract the frame](https://github.com/takanyanta/Technical-Stock-Trade-Analysis2/blob/main/Pic/history.png "process1")
+
+```python
+length = X_train_keras.shape[1]
+num_feature = X_train_keras.shape[2]
+
+model = Sequential()
+
+#model.add(GRU(128, input_shape=(length, num_feature), return_sequences=False))
+
+model.add(GRU(128, input_shape=(length, num_feature), return_sequences=True))
+model.add(GRU(128, input_shape=(length, num_feature), return_sequences=False))
+model.add(Dense(3, activation="softmax"))
+model.compile(loss="categorical_crossentropy", optimizer="Adam")
+print(model.summary())
+
+with tf.device('/GPU:0'):
+    es = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5, mode='min')
+    history = model.fit(X_train_keras, y_train2, 
+              batch_size=128, 
+              epochs=200,
+              validation_split=0.1,
+              callbacks = [es],
+              shuffle=False)
+```
 
 |Class|Accuracy-Score|
 ---|---
