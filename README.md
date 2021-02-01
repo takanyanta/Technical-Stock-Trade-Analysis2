@@ -73,6 +73,8 @@ def return_series_data(ticker):
 * For prediction, use time series data(<img src="https://latex.codecogs.com/gif.latex?p_{t-60}" /> ~ <img src="https://latex.codecogs.com/gif.latex?p_{t-1}" />)
 * Each data are transformed to [0, 1] by MinMaxScaler
 
+![Extract the frame](https://github.com/takanyanta/Technical-Stock-Trade-Analysis2/blob/main/Pic/plots.png "process1")
+
 **Target Data**
 
 | Label |Explanation| Definition |
@@ -210,14 +212,14 @@ with tf.device('/GPU:0'):
 
 |Class|Accuracy-Score|
 ---|---
-|Train|0.7076607654256704|
-|Test|0.6496790412730956|
+|Train|0.7484541785993231|
+|Test|0.6737204364062386|
 
 |-|Predict:0(up) | Predict:1(stay) | Predict:2(down) |
 ---|---|---|---
-|**Actual:0(up)**         |    9097                      |    2635      |       1304|
-|**Actual:1(stay)**      |     3442      |       8630      |       2578|
-|**Actual:2(down)**        |   1953        |     2651      |       8327|
+|**Actual:0(up)**         |    9626                      |    3005                   |       1178|
+|**Actual:1(stay)**      |     2627                   |       8957                   |       2882|
+|**Actual:2(down)**        |   883        |     2793                   |       9020|
 
 
 ### 3. Verification in actual data
