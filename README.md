@@ -17,11 +17,12 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 * Define price at time point *t* as  <img src="https://latex.codecogs.com/gif.latex?p_{t}" />
 
-* Preprocess input data
+**Input Data**
 
-Using 
+* For prediction, use time series data(<img src="https://latex.codecogs.com/gif.latex?p_{t-60}" /> ~ <img src="https://latex.codecogs.com/gif.latex?p_{t-1}" />)
+* Each data are transformed to [0, 1] by MinMaxScaler
 
-* Preprocess target data
+**Target Data**
 
 | Label |Explanation| Definition |
 ---|---|---
