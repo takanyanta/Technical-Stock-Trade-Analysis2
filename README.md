@@ -15,6 +15,14 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 #### 1-2. Preprocess both the input and the target data
 
+* Define price at time point *t* as  <img src="https://latex.codecogs.com/gif.latex?p_{t}" />
+
+* Preprocess input data
+
+Using 
+
+* Preprocess target data
+
 | Label |Explanation| Definition |
 ---|---|---
 | 0 |Up|   <img src="https://latex.codecogs.com/gif.latex?\frac{p_{t&plus;30}}{p_t}&space;\geq&space;5%" /> |
