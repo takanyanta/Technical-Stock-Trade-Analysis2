@@ -100,7 +100,7 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 * At 2021/2/1, the prediction for each tikers by GRU is as below;
 
-|Ticker|Company Name|Prediction label|Explanation|Prediction(2020/2/1)|Verification(2021/3/17)|Result|
+|Ticker|Company Name|Prediction label|Explanation|Price at Prediction(2020/2/1)|Price at Verification(2021/3/17)|Result|
 ---|---|---|---|---|---|---
 |3443|TOCALO Co., Ltd.|0|Up|4145|||
 |3466|LaSalle LOGIPORT REIT|2|Down|164000|||
