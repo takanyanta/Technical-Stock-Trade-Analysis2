@@ -140,18 +140,18 @@ print( res_LogReg )
 
 |Class|Accuracy-Score|
 ---|---
-|**Train**|0.3763831033585004|
-|**Test**|0.3718971955773596|
+|**Train**|0.362714787815673|
+|**Test**|0.35578824046276636|
 
 |-|Predict:0(up) | Predict:1(stay) | Predict:2(down) |
 ---|---|---|---
-|**Actual:0(up)**        |     6623       |      6293                     |       893|
-|**Actual:1(stay)**      |     6306       |     7245                     |       915|
-|**Actual:2(down)**       |    5408                    |      5919                    |      1369|
+|**Actual:0(up)**        |     5044                    |      7651                                  |       1114|
+|**Actual:1(stay)**      |     5072                    |     8259                                  |       1135|
+|**Actual:2(down)**       |    3979                                 |      7443                                 |      1274|
 
 ### 2-5. Gradient Boost Classification
 
-* Only change *max_depth* parameter(set to 19)
+* Only change *max_depth* parameter(set to 20)
 
 ```python
 XGBC = XGBClassifier(max_depth = 19,  tree_method='gpu_hist')
@@ -166,14 +166,14 @@ print( res_XGBC )
 
 |Class|Accuracy-Score|
 ---|---
-|**Train**|0.9902531892736267|
-|**Test**|0.6847282224012106|
+|**Train**|?|
+|**Test**|?|
 
 |-|Predict:0(up) | Predict:1(stay) | Predict:2(down) |
 ---|---|---|---
-|**Actual:0(up)**        |     9758                    |      2878                    |       1173|
-|**Actual:1(stay)**      |     2598                    |     9944                    |       1924|
-|**Actual:2(down)**       |    1568                    |      2776                    |      8352|
+|**Actual:0(up)**        |     ?                    |      ?                    |       ?|
+|**Actual:1(stay)**      |     ?                    |     ?                    |       ?|
+|**Actual:2(down)**       |    ?                    |      ?                    |      ?|
 
 ### 2-6. GRU Classification
 * Define *batch_size* as 128
