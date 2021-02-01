@@ -84,6 +84,12 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 **Model Structure**
 
+![Extract the frame](https://github.com/takanyanta/Technical-Stock-Trade-Analysis2/blob/main/Pic/GRU_structure.png "process1")
+
+**Learning History**
+
+![Extract the frame](https://github.com/takanyanta/Technical-Stock-Trade-Analysis2/blob/main/Pic/history.png "process1")
+
 |Class|Accuracy-Score|
 ---|---
 |Train|0.689112112333916|
