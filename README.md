@@ -9,7 +9,7 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 ### 1. Prepair Data
 
-* Choose randomly 200 tickers
+* Choose randomly 50 tickers
 
 #### 1-1. Extract stock price data by using pandas-datareader
 
@@ -30,7 +30,9 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 | 1 |Stay| <img src="https://latex.codecogs.com/gif.latex?-5%&space;\leq&space;\frac{p_{t&plus;30}}{p_t}&space;\leq&space;5%" /> |
 | 2 |Down| <img src="https://latex.codecogs.com/gif.latex?\frac{p_{t&plus;30}}{p_t}&space;\leq&space;-5%" /> |
 
-### 2. Train and Test
+### 2. Training and Testing
+
+* Data distribution is as below;
 
 #### 2-1. Logistic Regression
 
@@ -38,4 +40,59 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 #### 2-3. GRU Classification
 
-### 3. 
+### Verification in actual data
+
+* At 2021/2/1, the prediction for each tikers is as below;
+
+|Ticker|Company Name|Prediction(2020/2/1)|Verification(2021/3/17)|
+---|---|---|---
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
