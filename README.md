@@ -17,9 +17,9 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 | Label |Explanation| Definition |
 ---|---|---
-| 0 |Up|   <img src="https://latex.codecogs.com/gif.latex?\int_a^bf(x)dx" /> |
+| 0 |Up|   <img src="https://latex.codecogs.com/gif.latex?\frac{p_{t&plus;30}}{p_t}&space;\geq&space;5%" /> |
 | 1 |Stay| <img src="https://latex.codecogs.com/gif.latex?-5%&space;\leq&space;\frac{p_{t&plus;30}}{p_t}&space;\leq&space;5%" /> |
-| 2 |Down| <img src="https://latex.codecogs.com/gif.latex?\int_a^bf(x)dx" /> |
+| 2 |Down| <img src="\frac{p_{t+30}}{p_t} \leq -5%" /> |
 
 ### 2. Train and Test
 
