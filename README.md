@@ -84,9 +84,19 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 **Model Structure**
 
+|Class|Accuracy-Score|
+---|---
+|**Train**|0.689112112333916|
+|**Test**|0.6414555481694857|
+
+|-|Predict:0(up) | Predict:1(stay) | Predict:2(down) |
+---|---|---|---
+|Actual:0(up)         |    9097         |    2635      |       1304|
+|Actual:1(stay)      |     3442      |       8630      |       2578|
+|Actual:2(down)        |   1953        |     2651      |       8327|
 
 
-### Verification in actual data
+### 3. Verification in actual data
 
 * At 2021/2/1, the prediction for each tikers is as below;
 
