@@ -66,18 +66,18 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 #### 2-2. Gradient Boost Classification
 
-* Only change *max_depth* parameter
+* Only change *max_depth* parameter(=15)
 
 |Class|Accuracy-Score|
 ---|---
-|**Train**|0.3902635185595522|
-|**Test**|0.3884826550459167|
+|**Train**|0.9860631996875814|
+|**Test**|0.6633228381050011|
 
 |-|Predict:0(up) | Predict:1(stay) | Predict:2(down) |
 ---|---|---|---
-|**Actual:0(up)**        |     3632       |      8680       |       724|
-|**Actual:1(stay)**      |     2927       |     10910       |       813|
-|**Actual:2(down)**       |    2811       |      8883       |      1237|
+|**Actual:0(up)**        |     9250       |      3147       |       1412|
+|**Actual:1(stay)**      |     2394       |     9881       |       2191|
+|**Actual:2(down)**       |    1486       |      3164       |      8046|
 
 #### 2-3. GRU Classification
 * Define *batch_size* as 128
