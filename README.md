@@ -32,7 +32,24 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 ### 2. Training and Testing
 
+* Use hold-out method simply(test_size=20%)
 * Data distribution is as below;
+
+** Train Data **
+
+|Label|Explanation|Count|
+---|---|---
+|0|up|39,577|
+|1|stay|44,379|
+|2|down|37,895|
+
+** Test Data **
+
+|Label|Explanation|Count|
+---|---|---
+|0|up|13,036|
+|1|stay|14,650|
+|2|down|12,931|
 
 #### 2-1. Logistic Regression
 
