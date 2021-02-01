@@ -1,17 +1,15 @@
 # Technical-Stock-Trade-Analysis2
 Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
-## Purpose
+## 1. Purpose
 * To predict that the stock price will whether go up or down.
 * Compare some machine learning techniques about classification.
 
-## Process
-
-### 1. Prepair Data
+## 2. Process
 
 * Choose randomly 50 tickers
 
-#### 1-1. Extract stock price data by using pandas-datareader
+### 2-1. Extract stock price data by using pandas-datareader
 
 ```python
 def return_series_data(ticker):
@@ -66,7 +64,7 @@ def return_series_data(ticker):
         return ticker
 ```
 
-#### 1-2. Preprocess both the input and the target data
+### 2-2. Preprocess both the input and the target data
 
 * Define price at time point *t* as  <img src="https://latex.codecogs.com/gif.latex?p_{t}" />
 
@@ -104,7 +102,7 @@ for i in tqdm( file_list_random ):
   #  break
 ```
 
-### 2. Training and Testing
+### 2-3. Training and Testing
 
 * Use hold-out method simply(test_size=20%)
 * Data distribution is as below;
@@ -125,7 +123,7 @@ for i in tqdm( file_list_random ):
 |1|stay|14466|35.3%|
 |2|down|12696|30.7%|
 
-#### 2-1. Logistic Regression
+### 2-4. Logistic Regression
 
 |Class|Accuracy-Score|
 ---|---
@@ -138,7 +136,7 @@ for i in tqdm( file_list_random ):
 |**Actual:1(stay)**      |     6306       |     7245                     |       915|
 |**Actual:2(down)**       |    5408                    |      5919                    |      1369|
 
-#### 2-2. Gradient Boost Classification
+### 2-5. Gradient Boost Classification
 
 * Only change *max_depth* parameter(set to 19)
 
@@ -153,7 +151,7 @@ for i in tqdm( file_list_random ):
 |**Actual:1(stay)**      |     2598                    |     9944                    |       1924|
 |**Actual:2(down)**       |    1568                    |      2776                    |      8352|
 
-#### 2-3. GRU Classification
+### 2-6. GRU Classification
 * Define *batch_size* as 128
 
 **Model Structure**
@@ -231,3 +229,7 @@ for i in tqdm( file_list_random ):
 |7769|Rhythm Co., Ltd.|2|2|Down|728||
 |7863|Hiraga Co., Ltd.|1|2||850||
 
+### 4. Conclusion
+* 
+* 
+* 
