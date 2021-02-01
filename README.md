@@ -37,19 +37,19 @@ Using Logistic Regression, Gradient Boost Classification, GRU Classification
 
 ** Train Data **
 
-|Label|Explanation|Count|
----|---|---
-|0|up|39,577|
-|1|stay|44,379|
-|2|down|37,895|
+|Label|Explanation|Count|Composition ratio|
+---|---|---|---
+|0|up|39,577|36.4%|
+|1|stay|44,379|32.4%|
+|2|down|37,895|31.0%|
 
 ** Test Data **
 
-|Label|Explanation|Count|
----|---|---
-|0|up|13,036|
-|1|stay|14,650|
-|2|down|12,931|
+|Label|Explanation|Count|Composition ratio|
+---|---|---|---
+|0|up|13,036|36.0%|
+|1|stay|14,650|32.0%|
+|2|down|12,931|31.8%|
 
 #### 2-1. Logistic Regression
 
