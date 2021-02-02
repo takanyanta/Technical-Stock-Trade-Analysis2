@@ -175,6 +175,8 @@ print( res_XGBC )
 |**Actual:1(stay)**      |   3318                 |   8215               |  2933|
 |**Actual:2(down)**       |   2792                  |   4656                | 5248|
 
+![Extract the frame](https://github.com/takanyanta/Technical-Stock-Trade-Analysis2/blob/main/Pic/GBC.png "process1")
+
 ### 2-6. GRU(Gated Recurrent Unit) Classification
 * Define *batch_size* as 128
 
