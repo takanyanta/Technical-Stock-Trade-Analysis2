@@ -154,7 +154,7 @@ print( res_LogReg )
 * Only change *max_depth* parameter(set to 20)
 
 ```python
-XGBC = XGBClassifier(max_depth = 19,  tree_method='gpu_hist')
+XGBC = XGBClassifier(max_depth = 20,  tree_method='gpu_hist')
 XGBC.fit(X_train1, y_train1)
 print(XGBC.score(X_train1, y_train1))
 print(XGBC.score(X_test1, y_test1))
@@ -166,16 +166,16 @@ print( res_XGBC )
 
 |Class|Accuracy-Score|
 ---|---
-|**Train**|?|
-|**Test**|?|
+|**Train**|1.0|
+|**Test**|0.48700300212345315|
 
 |-|Predict:0(up) | Predict:1(stay) | Predict:2(down) |
 ---|---|---|---
-|**Actual:0(up)**        |     ?                    |      ?                    |       ?|
-|**Actual:1(stay)**      |     ?                    |     ?                    |       ?|
-|**Actual:2(down)**       |    ?                    |      ?                    |      ?|
+|**Actual:0(up)**        |  6490               |     4634                  |  2685|
+|**Actual:1(stay)**      |   3318                 |   8215               |  2933|
+|**Actual:2(down)**       |   2792                  |   4656                | 5248|
 
-### 2-6. GRU Classification
+### 2-6. GRU(Gated Recurrent Unit) Classification
 * Define *batch_size* as 128
 
 **Model Structure**
@@ -224,58 +224,59 @@ with tf.device('/GPU:0'):
 
 ### 3. Verification in actual data
 
-* At 2021/2/1, the prediction for each tikers by GRU and GDBC is as below;
+* At 2021/2/1, the prediction for each tikers by GRU is as below;
 
-|ticker|Company Name|Prediction Label(GRU)|Prediction Label(GDBC)|Explanation|Price at Prediction(2020/2/1)|Price at Verification(2021/3/17)|Result|
----|---|---|---|---|---|---|---
-|3443|TOCALO Co., Ltd.|2|0||4145||
-|3466|LaSalle LOGIPORT REIT|1|0||164000||
-|3577|Tokai Senko K.K.|0|2||1119||
-|3578|Soko Seiren Co.,Ltd.|2|0||361||
-|3624|Axel Mark Inc. |2|2|Down|331||
-|3674|Aucfan Co., Ltd. |1|2||2205||
-|3738|T-Gaia Corporation|2|2|Down|1907||
-|3836|Avant Corporation|0|2||1416||
-|3865|Hokuetsu Corporation|2|2|Down|437||
-|3901|MarkLines Co., Ltd. |0|0|Up|2484||
-|3907|Silicon Studio Corporation|2|1||1227||
-|4080|Tanaka Chemical Corporation|0|0|Up|1241||
-|4428|sinops Inc. |2|2|Down|1619||
-|4499|Speee, Inc.|0|2||2900||
-|4555|Sawai Pharmaceutical Co., Ltd. |2|0||4730||
-|4635|Tokyo Printing Ink Mfg. Co., Ltd. |2|2|Down|2060||
-|4653|Daiohs Corporation|2|2|Down|961||
-|4669|NIPPAN RENTAL Co.,Ltd. |2|0||742||
-|4777|Gala Incorporated|2|0||219||
-|5108| Bridgestone Co.|2|0||3906||
-|5194|Sagami Rubber Industries Co., Ltd.|0|0|Up|1190||
-|5208|Arisawa Mfg. Co., Ltd.|2|2|Down|971||
-|5987|Onex Co.|2|0||1351||
-|5999|Ihara Science Co.|2|2|Down|1750||
-|6067|Impact HD Inc.|1|2||2860||
-|6072|Jibannet Holdings Co., Ltd.|0|2||203||
-|6094| Freakout Holdings, Inc. |1|0||850||
-|6134|Fuji Co.|2|2|Down|2797||
-|6188|Fuji Soft Service Bureau Inc.|1|0||515||
-|6189|Global Kids Company Corp.|1|2||885||
-|6303|Sasakura Engineering Co., Ltd.|1|2||2256||
-|6594| Nidec Co. |2|2|Down|14195||
-|6722|A&T Co. |2|2|Down|1807||
-|6736|Suncorporation|2|2|Down|3935||
-|6744|Nohmi Bosai Ltd.|2|0||2218||
-|6775|TB Group Inc.|1|2||171||
-|6839|Funai Electric Co., Ltd.|2|2|Down|430||
-|6958|CMK Co. |0|0|Up|436||
-|7057|New Constructor's Network Co., Ltd. |0|2||1222||
-|7245|Daido Metal Co., Ltd.|1|0||508||
-|7255|Sakurai Ltd.|0|2||492||
-|7268|Tatsumi Co.|0|2||341||
-|7578|Nichiryoku Co., Ltd.|2|2|Down|1211||
-|7597|Tokyo Kiho Co., Ltd.|2|2|Down|1899||
-|7618| PC Depot Co. |0|0|Up|562||
-|7676|Goodspeed. Co., Ltd.|2|2|Down|1650||
-|7769|Rhythm Co., Ltd.|2|2|Down|728||
-|7863|Hiraga Co., Ltd.|1|2||850||
+|ticker|Company Name|Prediction Label|Explanation|Price at Prediction(2020/2/1)|Price at Verification(2021/3/17)|Result|
+---|---|---|---|---|---|---
+|3443|TOCALO Co., Ltd.|1|Stay|4145|||
+|3466|LaSalle LOGIPORT REIT|2|Down|164000|||
+|3577|Tokai Senko K.K.|1|Stay|1119|||
+|3578|Soko Seiren Co.,Ltd.|0|Up|361|||
+|3624|Axel Mark Inc. |0|Up|331|||
+|3674|Aucfan Co., Ltd. |2|Down|2205|||
+|3738|T-Gaia Corporation|2|Down|1907|||
+|3836|Avant Corporation|1|Stay|1416|||
+|3865|Hokuetsu Corporation|2|Down|437|||
+|3901|MarkLines Co., Ltd. |0|Up|2484|||
+|3907|Silicon Studio Corporation|1|Stay|1227|||
+|4080|Tanaka Chemical Corporation|2|Down|1241|||
+|4428|sinops Inc. |2|Down|1619|||
+|4499|Speee, Inc.|0|Up|2900|||
+|4555|Sawai Pharmaceutical Co., Ltd. |2|Down|4730|||
+|4635|Tokyo Printing Ink Mfg. Co., Ltd. |1|Stay|2060|||
+|4653|Daiohs Corporation|1|Stay|961|||
+|4669|NIPPAN RENTAL Co.,Ltd. |1|Stay|742|||
+|4777|Gala Incorporated|0|Up|219|||
+|5108| Bridgestone Co.|0|Up|3906|||
+|5194|Sagami Rubber Industries Co., Ltd.|0|Up|1190|||
+|5208|Arisawa Mfg. Co., Ltd.|1|Stay|971|||
+|5987|Onex Co.|1|Stay|1351|||
+|5999|Ihara Science Co.|2|Down|1750|||
+|6067|Impact HD Inc.|2|Down|2860|||
+|6072|Jibannet Holdings Co., Ltd.|1|Stay|203|||
+|6094| Freakout Holdings, Inc. |1|Stay|850|||
+|6134|Fuji Co.|2|Down|2797|||
+|6188|Fuji Soft Service Bureau Inc.|2|Down|515|||
+|6189|Global Kids Company Corp.|2|Down|885|||
+|6303|Sasakura Engineering Co., Ltd.|1|Stay|2256|||
+|6594| Nidec Co. |1|Stay|14195|||
+|6722|A&T Co. |1|Stay|1807|||
+|6736|Suncorporation|0|Up|3935|||
+|6744|Nohmi Bosai Ltd.|0|Up|2218|||
+|6775|TB Group Inc.|1|Stay|171|||
+|6839|Funai Electric Co., Ltd.|1|Stay|430|||
+|6958|CMK Co. |2|Down|436|||
+|7057|New Constructor's Network Co., Ltd. |1|Stay|1222|||
+|7245|Daido Metal Co., Ltd.|2|Down|508|||
+|7255|Sakurai Ltd.|0|Up|492|||
+|7268|Tatsumi Co.|2|Down|341|||
+|7578|Nichiryoku Co., Ltd.|2|Down|1211|||
+|7597|Tokyo Kiho Co., Ltd.|1|Stay|1899|||
+|7618| PC Depot Co. |2|Down|562|||
+|7676|Goodspeed. Co., Ltd.|1|Stay|1650|||
+|7769|Rhythm Co., Ltd.|2|Down|728|||
+|7863|Hiraga Co., Ltd.|2|Down|850|||
+
 
 ### 4. Conclusion
 * 
