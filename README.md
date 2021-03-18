@@ -230,31 +230,31 @@ with tf.device('/GPU:0'):
 
 |ticker|Company Name|Prediction Label|Explanation|Price at Prediction(2020/2/1)|Price at Verification(2021/3/17)|Result|
 ---|---|---|---|---|---|---
-|3443|TOCALO Co., Ltd.|1|Stay|4145|||
-|3466|LaSalle LOGIPORT REIT|2|Down|164000|||
-|3577|Tokai Senko K.K.|1|Stay|1119|||
-|3578|Soko Seiren Co.,Ltd.|0|Up|361|||
-|3624|Axel Mark Inc. |0|Up|331|||
-|3674|Aucfan Co., Ltd. |2|Down|2205|||
-|3738|T-Gaia Corporation|2|Down|1907|||
-|3836|Avant Corporation|1|Stay|1416|||
-|3865|Hokuetsu Corporation|2|Down|437|||
-|3901|MarkLines Co., Ltd. |0|Up|2484|||
-|3907|Silicon Studio Corporation|1|Stay|1227|||
-|4080|Tanaka Chemical Corporation|2|Down|1241|||
-|4428|sinops Inc. |2|Down|1619|||
-|4499|Speee, Inc.|0|Up|2900|||
-|4555|Sawai Pharmaceutical Co., Ltd. |2|Down|4730|||
-|4635|Tokyo Printing Ink Mfg. Co., Ltd. |1|Stay|2060|||
-|4653|Daiohs Corporation|1|Stay|961|||
-|4669|NIPPAN RENTAL Co.,Ltd. |1|Stay|742|||
-|4777|Gala Incorporated|0|Up|219|||
-|5108| Bridgestone Co.|0|Up|3906|||
-|5194|Sagami Rubber Industries Co., Ltd.|0|Up|1190|||
-|5208|Arisawa Mfg. Co., Ltd.|1|Stay|971|||
-|5987|Onex Co.|1|Stay|1351|||
-|5999|Ihara Science Co.|2|Down|1750|||
-|6067|Impact HD Inc.|2|Down|2860|||
+|3443|TOCALO Co., Ltd.|1|Stay|4145|4950|Up|
+|3466|LaSalle LOGIPORT REIT|2|Down|164000|160300|Stay|
+|3577|Tokai Senko K.K.|1|Stay|1119|1140|Stay|
+|3578|Soko Seiren Co.,Ltd.|0|Up|361|472|Up|
+|3624|Axel Mark Inc. |0|Up|331|334|Stay|
+|3674|Aucfan Co., Ltd. |2|Down|2205|1858|Down|
+|3738|T-Gaia Corporation|2|Down|1907|1983|Stay|
+|3836|Avant Corporation|1|Stay|1416|1581|Up|
+|3865|Hokuetsu Corporation|2|Down|437|546|Up|
+|3901|MarkLines Co., Ltd. |0|Up|2484|2447|Stay|
+|3907|Silicon Studio Corporation|1|Stay|1227|1261|Stay|
+|4080|Tanaka Chemical Corporation|2|Down|1241|1278|Stay|
+|4428|sinops Inc. |2|Down|1619|1879|Up|
+|4499|Speee, Inc.|0|Up|2900|2726|Down|
+|4555|Sawai Pharmaceutical Co., Ltd. |2|Down|4730|5410|Up|
+|4635|Tokyo Printing Ink Mfg. Co., Ltd. |1|Stay|2060|2196|Up|
+|4653|Daiohs Corporation|1|Stay|961|1000|Stay|
+|4669|NIPPAN RENTAL Co.,Ltd. |1|Stay|742|1071|Up|
+|4777|Gala Incorporated|0|Up|219|222|Stay|
+|5108| Bridgestone Co.|0|Up|3906|4347|Up|
+|5194|Sagami Rubber Industries Co., Ltd.|0|Up|1190|1177|Stay|
+|5208|Arisawa Mfg. Co., Ltd.|1|Stay|971|1076|Up|
+|5987|Onex Co.|1|Stay|1351|1231|Down|
+|5999|Ihara Science Co.|2|Down|1750|1709|Stay|
+|6067|Impact HD Inc.|2|Down|2860|2515|Down|
 |6072|Jibannet Holdings Co., Ltd.|1|Stay|203|||
 |6094| Freakout Holdings, Inc. |1|Stay|850|||
 |6134|Fuji Co.|2|Down|2797|||
