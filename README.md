@@ -281,6 +281,4 @@ with tf.device('/GPU:0'):
 
 
 ### 4. Conclusion
-* 
-* 
-* 
+* Predicting future stock price seems to be very difficult!
