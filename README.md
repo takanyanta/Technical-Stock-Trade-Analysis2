@@ -255,29 +255,29 @@ with tf.device('/GPU:0'):
 |5987|Onex Co.|1|Stay|1351|1231|Down|
 |5999|Ihara Science Co.|2|Down|1750|1709|Stay|
 |6067|Impact HD Inc.|2|Down|2860|2515|Down|
-|6072|Jibannet Holdings Co., Ltd.|1|Stay|203|||
-|6094| Freakout Holdings, Inc. |1|Stay|850|||
-|6134|Fuji Co.|2|Down|2797|||
-|6188|Fuji Soft Service Bureau Inc.|2|Down|515|||
-|6189|Global Kids Company Corp.|2|Down|885|||
-|6303|Sasakura Engineering Co., Ltd.|1|Stay|2256|||
-|6594| Nidec Co. |1|Stay|14195|||
-|6722|A&T Co. |1|Stay|1807|||
-|6736|Suncorporation|0|Up|3935|||
-|6744|Nohmi Bosai Ltd.|0|Up|2218|||
-|6775|TB Group Inc.|1|Stay|171|||
-|6839|Funai Electric Co., Ltd.|1|Stay|430|||
-|6958|CMK Co. |2|Down|436|||
-|7057|New Constructor's Network Co., Ltd. |1|Stay|1222|||
-|7245|Daido Metal Co., Ltd.|2|Down|508|||
-|7255|Sakurai Ltd.|0|Up|492|||
-|7268|Tatsumi Co.|2|Down|341|||
-|7578|Nichiryoku Co., Ltd.|2|Down|1211|||
-|7597|Tokyo Kiho Co., Ltd.|1|Stay|1899|||
-|7618| PC Depot Co. |2|Down|562|||
-|7676|Goodspeed. Co., Ltd.|1|Stay|1650|||
-|7769|Rhythm Co., Ltd.|2|Down|728|||
-|7863|Hiraga Co., Ltd.|2|Down|850|||
+|6072|Jibannet Holdings Co., Ltd.|1|Stay|203|217|Up|
+|6094| Freakout Holdings, Inc. |1|Stay|850|1438|Up|
+|6134|Fuji Co.|2|Down|2797|2791|Stay|
+|6188|Fuji Soft Service Bureau Inc.|2|Down|515|452|Down|
+|6189|Global Kids Company Corp.|2|Down|885|971|Up|
+|6303|Sasakura Engineering Co., Ltd.|1|Stay|2256|2330|Stay|
+|6594| Nidec Co. |1|Stay|14195|13275|Down|
+|6722|A&T Co. |1|Stay|1807|-|-|
+|6736|Suncorporation|0|Up|3935|3570|Down|
+|6744|Nohmi Bosai Ltd.|0|Up|2218|2363|Up|
+|6775|TB Group Inc.|1|Stay|171|176|Stay|
+|6839|Funai Electric Co., Ltd.|1|Stay|430|727|Up|
+|6958|CMK Co. |2|Down|436|493|Up|
+|7057|New Constructor's Network Co., Ltd. |1|Stay|1222|1397|Up|
+|7245|Daido Metal Co., Ltd.|2|Down|508|617|Up|
+|7255|Sakurai Ltd.|0|Up|492|489|Stay|
+|7268|Tatsumi Co.|2|Down|341|345|Stay|
+|7578|Nichiryoku Co., Ltd.|2|Down|1211|1315|Up|
+|7597|Tokyo Kiho Co., Ltd.|1|Stay|1899|2003|Up|
+|7618| PC Depot Co. |2|Down|562|521|Stay|
+|7676|Goodspeed. Co., Ltd.|1|Stay|1650|1690|Stay|
+|7769|Rhythm Co., Ltd.|2|Down|728|894|Up|
+|7863|Hiraga Co., Ltd.|2|Down|850|1215|Up|
 
 
 ### 4. Conclusion
